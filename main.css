@@ -1,0 +1,159 @@
+/* Default CSS */
+
+body {
+    background: linear-gradient(120deg, #1db954, #191414) no-repeat fixed;
+}
+
+/* Collapsed None -----------------*/
+/* wrapper */
+.wrapper {
+  width: 100%;
+  padding-left: 200px;
+  transition-duration: 0.5s;
+}
+
+/* sidebar */
+.wrapper .sidebar {
+  position: absolute;
+  width: 200px;
+  height: calc(100vh);
+  /* if you have navbar on the top you can do this below   */
+  /*     height: calc(100vh - 55px) */
+  left: 0px;
+  background: #333;
+  white-space: nowrap;
+  transition-duration: 0.5s;
+  z-index: 1000;
+}
+
+/* Centering the icon & added an extra class in case I need to center other icons */
+.wrapper .sidebar .sb-head, .i-center {
+  display: block;
+  text-align: center;
+}
+
+/* Spotify icon */
+.wrapper .sidebar .sb-head i {
+  color: #1db954;
+}
+
+/* Overriding the rules of material icon */
+.wrapper .sidebar .library {
+    font-size: 1rem;
+}
+
+/* sidebar item list */
+.wrapper .sidebar .sb-item-list {
+  height: calc(100% - 50px);
+  width: 100%;
+}
+
+/* sidebar item */
+.wrapper .sidebar .sb-item {
+  display: block;
+  width: 100%;
+  line-height: 50px;
+  color: #ccc;
+  background: #333;
+  cursor: pointer;
+  padding-left: 7px;
+}
+.wrapper .sidebar .sb-icon {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+.wrapper .sidebar .sb-item:hover,
+.sb-item.active {
+  filter: brightness(130%);
+}
+.wrapper > .sidebar > .sb-item-list > .sb-item > .sb-text {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+/* sidebar item active hint */
+.wrapper .sidebar .sb-item.active {
+  border-left: solid 3px green;
+  box-sizing: border-box;
+}
+.wrapper .sidebar .sb-item.active > .sb-icon {
+  margin-left: -3px;
+}
+
+/* sidebar collapse button */
+.wrapper .btn-toggle-sidebar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #aaa;
+}
+.wrapper .btn-toggle-sidebar .sb-icon.fa-angle-double-left {
+  display: inline-block;
+}
+.wrapper .btn-toggle-sidebar .sb-icon.fa-angle-double-right {
+  display: none;
+}
+
+/* Collapsed -----------------*/
+/* wrapper */
+.wrapper.sidebar-collapse {
+  padding-left: 60px;
+}
+
+/* sidebar */
+.wrapper.sidebar-collapse .sidebar {
+  width: 60px;
+}
+
+/* sidebar item */
+.wrapper.sidebar-collapse > .sidebar > .sb-item-list > .sb-item > .sb-text {
+  position: absolute;
+  transform: translateX(-200%);
+  opacity: 0;
+}
+
+/* sidebar collapse button */
+.wrapper.sidebar-collapse .btn-toggle-sidebar .sb-text {
+  display: none;
+}
+.wrapper.sidebar-collapse .btn-toggle-sidebar .sb-icon.fa-angle-double-left {
+  display: none;
+}
+.wrapper.sidebar-collapse .btn-toggle-sidebar .sb-icon.fa-angle-double-right {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Sidebar Sub Menu ---------------*/
+.wrapper .sb-menu:after {
+  content: " ";
+  display: block;
+  float: right;
+  margin-top: 19px;
+  margin-left: -12px;
+  margin-right: 5px;
+  width: 0;
+  height: 0;
+  border: solid 5px transparent;
+  border-left-color: #eee;
+}
+.wrapper .sb-menu > .sb-submenu {
+  display: none;
+}
+.wrapper .sb-submenu > .sb-item:first-child {
+  border-radius: 8px 8px 0px 0px;
+}
+.wrapper .sb-submenu > .sb-item:last-child {
+  border-radius: 0px 0px 8px 8px;
+}
+.wrapper .sb-menu:hover > .sb-submenu {
+  position: absolute;
+  display: block;
+  width: 200px;
+  top: 0;
+  left: calc(100% + 1px);
+}
+
+/*-------------------------------------------------------*/
+/* Main */
