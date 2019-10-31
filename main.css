@@ -209,7 +209,7 @@ body {
 /* Player */
 .player {
     position: absolute;
-    bottom: 2;
+    bottom: 0;
 }
 
 #audiowrap {
