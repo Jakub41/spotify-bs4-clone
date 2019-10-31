@@ -30,6 +30,7 @@
                 <div class="sb-head mb-2">
                     <i class="fab fa-spotify fa-3x"></i>
                 </div>
+                <!-- links -->
                 <div class="sb-item">
                     <i class="sb-icon fas fa-home"></i>
                     <span class="sb-text">Home</span>
@@ -44,6 +45,16 @@
                     </i>
                     <span class="sb-text">Library</span>
                 </div>
+            </div>
+            <div class="sb-cookie-item px-5 py-3">
+                <i class="fas fa-cookie-bite d-inline px-2" data-toggle="tooltip" data-placement="right"
+                    title="Cookie"></i>
+                <i class="fas fa-lock d-inline px-2" data-toggle="tooltip" data-placement="right"
+                    title="Privacy"></i>
+                <i class="material-icons d-inline px-2" data-toggle="tooltip" data-placement="right"
+                    title="Policy">
+                    chrome_reader_mode
+                </i>
             </div>
             <!-- Login & Register -->
             <div class="sb-item-login">
@@ -94,15 +105,40 @@
             </nav>
         </div>
         <!-- player -->
-        <!-- <section class="gradient">
-                <div class="player gradient">
-                    <a class="button gradient" id="play" href="" title=""></a>
-                    <a class="button gradient" id="mute" href="" title=""></a>
-                        <input type="range" id="seek" value="0" max=""/>
-                    <a class="button gradient" id="close" href="" title=""></a> 
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <div id="player">
+                        <img src="" class="coverr" alt="" height="200" width="200" />
+                        <div class="player-song">
+                            <div class="title"></div>
+                            <div class="artist"></div>
+                            <progress value="0" max="1"></progress>
+                            <div class="timestamps">
+                                <div class="time-now">0:00:00</div>
+                                <div class="time-finish">0:00:00</div>
+                            </div>
+                            <div class="actions">
+                                <div class="prev">
+                                    <i class="material-icons">fast_rewind</i>
+                                </div>
+                                <div class="play">
+                                    <a class="play-button paused" href="#">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                        <div class="triangle-1"></div>
+                                        <div class="triangle-2"></div>
+                                    </a>
+                                </div>
+                                <div class="next">
+                                    <i class="material-icons">fast_forward</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-        </section> -->
+            </div>
+        </footer>
     </div>
 
     <!-- Optional JavaScript -->

@@ -16,7 +16,7 @@ $(function() {
       .removeClass("active");
     $(this).addClass("active");
   });
-
+-
   // Adding the collapse when window < 768 tablets and small devices
   $(window).on("resize", function() {
     var win = $(this);
@@ -26,4 +26,9 @@ $(function() {
       $(".wrapper").removeClass("sidebar-collapse");
     }
   });
+
+  // Tooltip
+  $('[data-toggle="tooltip"]').tooltip()
+
+
 });
