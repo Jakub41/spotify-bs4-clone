@@ -102,8 +102,8 @@ body {
 }
 
 .sb-item-login .btn-group-vertical button:hover {
-    border-color: #1db954;
-  }
+  border-color: #1db954;
+}
 
 /* overriding the default margin top */
 .btn-group-vertical > button:not(:first-child) {
@@ -137,7 +137,12 @@ body {
 
 /* sidebar item */
 .wrapper.sidebar-collapse > .sidebar > .sb-item-list > .sb-item > .sb-text,
-.wrapper.sidebar-collapse > .sidebar > .sb-item-login > .btn-group-vertical > .sb-item > .sb-text {
+.wrapper.sidebar-collapse
+  > .sidebar
+  > .sb-item-login
+  > .btn-group-vertical
+  > .sb-item
+  > .sb-text {
   position: absolute;
   transform: translateX(-200%);
   opacity: 0;
@@ -188,40 +193,49 @@ body {
 
 /*-------------------------------------------------------*/
 /* Main */
+/* Navbar */
+.navbar .navbar-nav li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.navbar .navbar-nav li a:hover {
+  color: #191414;
+  text-decoration: underline #1db954;
+}
+
+/*-------------------------------------------------------*/
+/* Player */
+.player {
+    position: absolute;
+    bottom: 0;
+}
+
+#audiowrap {
+  margin: 0 auto;
+}
 
 /*------------------------------------------------------*/
 /* Media Queries */
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-
+@media only screen and (min-width: 321px) {
 }
 
 /* Smartphones (portrait) ----------- */
 /* viewport size <= 320px ----------- */
-@media only screen 
-and (max-width : 320px) {
-
+@media only screen and (max-width: 320px) {
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-    
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
 
 /* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 }
