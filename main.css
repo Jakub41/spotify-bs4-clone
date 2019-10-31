@@ -1,7 +1,7 @@
 /* Default CSS */
 
 body {
-    background: linear-gradient(120deg, #1db954, #191414) no-repeat fixed;
+  background: linear-gradient(120deg, #1db954, #191414) no-repeat fixed;
 }
 
 /* Collapsed None -----------------*/
@@ -27,7 +27,8 @@ body {
 }
 
 /* Centering the icon & added an extra class in case I need to center other icons */
-.wrapper .sidebar .sb-head, .i-center {
+.wrapper .sidebar .sb-head,
+.i-center {
   display: block;
   text-align: center;
 }
@@ -39,7 +40,7 @@ body {
 
 /* Overriding the rules of material icon */
 .wrapper .sidebar .library {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 /* sidebar item list */
@@ -80,6 +81,35 @@ body {
   margin-left: -3px;
 }
 
+/* Inputs Sign up / Login */
+.sb-item-login {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 70px;
+  border-top: 1px solid #aaa;
+}
+
+/* Vertical btn position */
+.sb-item-login .btn-group-vertical {
+  margin-left: 3%;
+  width: 90%;
+}
+
+.sb-item-login .btn-group-vertical button {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.sb-item-login .btn-group-vertical button:hover {
+    border-color: #1db954;
+  }
+
+/* overriding the default margin top */
+.btn-group-vertical > button:not(:first-child) {
+  margin-top: 20px;
+}
+
 /* sidebar collapse button */
 .wrapper .btn-toggle-sidebar {
   position: absolute;
@@ -106,7 +136,8 @@ body {
 }
 
 /* sidebar item */
-.wrapper.sidebar-collapse > .sidebar > .sb-item-list > .sb-item > .sb-text {
+.wrapper.sidebar-collapse > .sidebar > .sb-item-list > .sb-item > .sb-text,
+.wrapper.sidebar-collapse > .sidebar > .sb-item-login > .btn-group-vertical > .sb-item > .sb-text {
   position: absolute;
   transform: translateX(-200%);
   opacity: 0;
