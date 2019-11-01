@@ -82,6 +82,7 @@ body {
 .sb-cookie-item {
     position: absolute;
     bottom: 220px;
+    width: 100%;
 }
 
 /* icons */
@@ -118,8 +119,6 @@ body {
 .btn-group-vertical > button:not(:first-child) {
   margin-top: 20px;
 }
-
-
 
 /* sidebar collapse button */
 .wrapper .btn-toggle-sidebar {
@@ -174,6 +173,13 @@ body {
 
 /*-------------------------------------------------------*/
 /* Main */
+
+/* Hide class */
+.hide {
+    display: none;
+}
+
+/* Main Home */
 /* Navbar */
 .navbar .navbar-nav li a {
   color: #ffffff;
@@ -184,6 +190,29 @@ body {
 .navbar .navbar-nav li a:hover {
   color: #191414;
   text-decoration: underline #1db954;
+}
+
+/* General nav style */
+
+nav ul{
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+nav ul li{
+	padding: 10px 20px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	font-size: 20px;
+	color: #fff;
+}
+
+nav ul li:hover{
+	transition: 0.8s all;
 }
 
 /*-------------------------------------------------------*/
@@ -385,6 +414,13 @@ progress[value]::-webkit-progress-value {
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    nav ul{
+		
+	}
+
+	nav ul li{
+		
+	}
 }
 
 /* iPads (landscape) ----------- */
