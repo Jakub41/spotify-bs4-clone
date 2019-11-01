@@ -38,8 +38,8 @@ $(function() {
 
   /**
    *
-   * Main Pages
-   *
+   * Main Pages 
+   * On click event on menu span to open the pages in the same view
    */
   $(".menu .sb-item span").on("click", function(e) {
     // prevent default behaviour of the anchor tag

@@ -80,15 +80,15 @@ body {
 }
 /* cookie & inline icons */
 .sb-cookie-item {
-    position: absolute;
-    bottom: 220px;
-    width: 100%;
+  position: absolute;
+  bottom: 220px;
+  width: 100%;
 }
 
 /* icons */
 .sb-cookie-item i {
-    color: #ffffff;
-    font-size: 1rem;
+  color: #ffffff;
+  font-size: 1rem;
 }
 
 /* Inputs Sign up / Login */
@@ -176,7 +176,7 @@ body {
 
 /* Hide class */
 .hide {
-    display: none;
+  display: none;
 }
 
 /* Main Home */
@@ -194,25 +194,148 @@ body {
 
 /* General nav style */
 
-nav ul{
-	list-style-type: none;
-	display: flex;
-	justify-content: center;
-	padding: 10px;
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
-nav ul li{
-	padding: 10px 20px;
+nav ul li {
+  padding: 10px 20px;
 }
 
-nav ul li a{
-	text-decoration: none;
-	font-size: 20px;
-	color: #fff;
+nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
 }
 
-nav ul li:hover{
-	transition: 0.8s all;
+nav ul li:hover {
+  transition: 0.8s all;
+}
+
+/* Main Search Page */
+/* Search Bar */
+
+/* Full width and position */
+.f-width-form .btn-container {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  display: none;
+}
+
+/* Buttons dimensions */
+.f-width-form .btn-container button {
+  height: 2.625rem;
+  width: 2.625rem;
+}
+
+/* To create the rotation effect on search icon */
+.f-width-form .line {
+  display: inline-flex;
+  height: 0.1875rem;
+  width: 1.25rem;
+  background-color: #51ff00;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: -3.125rem;
+  margin: auto;
+  left: 100%;
+  -webkit-transform: rotate(40deg) translate(-10px, 0px);
+  transform: rotate(40deg) translate(-10px, 0px);
+  transition: all ease 0.25s;
+  border-radius: 0.125rem;
+}
+
+/* To open full width the input with effect */
+.f-width-form input {
+  height: 2.625rem !important;
+  width: 2.625rem !important;
+  transition: all ease 0.25s;
+  border-color: #51ff00;
+  border-width: 0.1875rem;
+  background-color: #08070b;
+  outline: 0;
+  color: #51ff00 !important;
+}
+
+/* Browser compatibility input */
+.f-width-form input::-webkit-input-placeholder {
+  opacity: 0;
+  color: #ffffff;
+}
+
+.f-width-form input:-ms-input-placeholder {
+  opacity: 0;
+  color: #ffffff;
+}
+
+.f-width-form input::-ms-input-placeholder {
+  opacity: 0;
+  color: #ffffff;
+}
+
+.f-width-form input::placeholder {
+  opacity: 0;
+  color: #ffffff;
+}
+
+/* Focus & Valid input */
+.f-width-form input:focus,
+.f-width-form input:valid {
+  padding-right: 88.2px;
+  background-color: #08070b;
+  outline: 0;
+  box-shadow: none;
+  width: 100% !important;
+  border-color:#51ff00;
+}
+
+/* Browser compatibility opacity */
+.f-width-form input:focus::-webkit-input-placeholder,
+.f-width-form input:valid::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.f-width-form input:focus:-ms-input-placeholder,
+.f-width-form input:valid:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.f-width-form input:focus::-ms-input-placeholder,
+.f-width-form input:valid::-ms-input-placeholder {
+  opacity: 1;
+}
+
+/* input placeholder focus valid opacity */
+.f-width-form input:focus::placeholder,
+.f-width-form input:valid::placeholder {
+  opacity: 1;
+}
+
+/* Display flex focus valid buttons */
+.f-width-form input:focus ~ .btn-container,
+.f-width-form input:valid ~ .btn-container {
+  display: flex;
+}
+
+/* Buttons color */
+.f-width-form input:focus ~ .btn-container button,
+.f-width-form input:valid ~ .btn-container button {
+  color: #51ff00;
+  outline: 0;
+}
+
+/* Effect of the rotate line */
+.f-width-form input:focus ~ .line,
+.f-width-form input:valid ~ .line {
+  -webkit-transform: rotate(0deg) translate(0px, -25px);
+  transform: rotate(0deg) translate(0px, -25px);
 }
 
 /*-------------------------------------------------------*/
@@ -225,176 +348,6 @@ footer {
   height: calc(20vh);
   background-color: #191414;
 }
-
-/* #player {
-  position: relative;
-  z-index: 2;
-  width: 600px;
-  background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-#player img {
-  position: absolute;
-  left: 15px;
-  top: -25px;
-  border-radius: 10px;
-}
-#player .player-song {
-  width: 370px;
-  height: 100%;
-  margin-left: 230px;
-}
-#player .player-song .title {
-  color: #333;
-  font-weight: 500;
-  font-size: 20px;
-  margin-top: 20px;
-}
-#player .player-song .artist {
-  font-size: 14px;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.5);
-}
-#player .player-song .timestamps {
-  width: calc(100% - 15px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  font-size: 10px;
-  color: rgba(0, 0, 0, 0.4);
-}
-#player .player-song .actions {
-  width: 100%;
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-#player .player-song .actions .next,
-#player .player-song .actions .prev {
-  cursor: pointer;
-}
-#player .player-song .actions i {
-  font-size: 32px;
-  -webkit-transform: translateY(2px);
-  transform: translateY(2px);
-  color: #bbbbbb;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-}
-#player .player-song .actions i:hover {
-  color: #888888;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-}
-
-progress[value] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: calc(100% - 15px);
-  height: 6px;
-  border-radius: 50px;
-  margin-top: 20px;
-}
-
-progress[value]::-webkit-progress-bar {
-  background-color: #eee;
-  border-radius: 50px;
-}
-
-progress[value]::-webkit-progress-value {
-  border-radius: 50px;
-  background-color: #333ddd;
-}
-
-.play-button {
-  height: 16px;
-  width: 16px;
-  display: block;
-  overflow: hidden;
-  position: relative;
-  margin: 0 10px;
-}
-.play-button:hover .left,
-.play-button:hover .right {
-  background-color: #888888;
-}
-
-.left {
-  height: 100%;
-  float: left;
-  background-color: #bbbbbb;
-  width: 36%;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  overflow: hidden;
-}
-
-.triangle-1 {
-  -webkit-transform: translate(0, -100%);
-  transform: translate(0, -100%);
-}
-
-.triangle-2 {
-  -webkit-transform: translate(0, 100%);
-  transform: translate(0, 100%);
-}
-
-.triangle-1,
-.triangle-2 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: transparent;
-  width: 0;
-  height: 0;
-  border-right: 16px solid #fff;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  -webkit-transition: -webkit-transform 0.25s ease;
-  transition: -webkit-transform 0.25s ease;
-  transition: transform 0.25s ease;
-  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
-}
-
-.right {
-  height: 100%;
-  float: right;
-  width: 36%;
-  background-color: #bbbbbb;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-
-.paused .left {
-  width: 50%;
-}
-
-.paused .right {
-  width: 50%;
-}
-
-.paused .triangle-1 {
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-}
-
-.paused .triangle-2 {
-  -webkit-transform: translate(0, 50%);
-  transform: translate(0, 50%);
-} */
 
 /*------------------------------------------------------*/
 /* Media Queries */
@@ -414,13 +367,11 @@ progress[value]::-webkit-progress-value {
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    nav ul{
-		
-	}
+  nav ul {
+  }
 
-	nav ul li{
-		
-	}
+  nav ul li {
+  }
 }
 
 /* iPads (landscape) ----------- */
