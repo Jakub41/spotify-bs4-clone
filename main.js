@@ -63,42 +63,23 @@ $(function() {
   var musicDataJson = "music.json";
   $.getJSON(musicDataJson);
 
-  //   $.getJSON(musicDataJson, function(data){
-  //     console.log(data);
-  //     var output = '<ul>';
-  //     $.each(data, function(key,val){
-  //       output += '<li>'+ val.title + " " + val.artist+ '</li>';
-  //     });
-  //     output += '</ul>';
-  //     $('#m-all-cards').html(output);
-  //     });
-
-  /*
-        Stop carousel
-    */
-  $(".carousel").carousel("pause");
-
-  $("#s-carousel").on("slide.bs.carousel", function(e) {
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 4;
-    var totalItems = $(".carousel-item").length;
-
-    if (idx >= totalItems - (itemsPerSlide - 1)) {
-      var it = itemsPerSlide - (totalItems - idx);
-      for (var i = 0; i < it; i++) {
-        // append slides to end
-        if (e.direction == "left") {
-          $(".carousel-item")
-            .eq(i)
-            .appendTo(".carousel-inner");
-        } else {
-          $(".carousel-item")
-            .eq(0)
-            .appendTo($(this).find(".carousel-inner"));
-        }
-      }
-    }
+  // Generating dynamically the cards for each element from OBJ
+  $.getJSON(musicDataJson, function(data) {
+    console.log(data);
+    var output = "";
+    $.each(data, function(key, val) {
+      output += '<div class="card">';
+      output +=
+        '<img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">';
+      output += '<div class="card-body">';
+      output += '<h4 class="card-title">' + val.title + '</h4>';
+      output += '<p class="card-title">' + val.artist + '</p>';
+      output +=
+        '<p class="card-text"><small class="text-muted">3:00</small></p>';
+      output += "</div>";
+      output += "</div>";
+    });
+    $("#m-all-cards").html(output);
   });
-  // Music Cards Search result
+
 });
