@@ -38,7 +38,7 @@ $(function() {
 
   /**
    *
-   * Main Pages 
+   * Main Pages
    * On click event on menu span to open the pages in the same view
    */
   $(".menu .sb-item span").on("click", function(e) {
@@ -58,4 +58,47 @@ $(function() {
           .removeClass("hide");
       });
   });
+
+  // Music Cards Home All Songs
+  var musicDataJson = "music.json";
+  $.getJSON(musicDataJson);
+
+  //   $.getJSON(musicDataJson, function(data){
+  //     console.log(data);
+  //     var output = '<ul>';
+  //     $.each(data, function(key,val){
+  //       output += '<li>'+ val.title + " " + val.artist+ '</li>';
+  //     });
+  //     output += '</ul>';
+  //     $('#m-all-cards').html(output);
+  //     });
+
+  /*
+        Stop carousel
+    */
+  $(".carousel").carousel("pause");
+
+  $("#s-carousel").on("slide.bs.carousel", function(e) {
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 4;
+    var totalItems = $(".carousel-item").length;
+
+    if (idx >= totalItems - (itemsPerSlide - 1)) {
+      var it = itemsPerSlide - (totalItems - idx);
+      for (var i = 0; i < it; i++) {
+        // append slides to end
+        if (e.direction == "left") {
+          $(".carousel-item")
+            .eq(i)
+            .appendTo(".carousel-inner");
+        } else {
+          $(".carousel-item")
+            .eq(0)
+            .appendTo($(this).find(".carousel-inner"));
+        }
+      }
+    }
+  });
+  // Music Cards Search result
 });
